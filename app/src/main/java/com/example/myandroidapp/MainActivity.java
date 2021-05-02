@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_minus).setOnClickListener(v -> textView.setText(String.format("%s-", textView.getText())));
         findViewById(R.id.button_multiply).setOnClickListener(v -> textView.setText(String.format("%s*", textView.getText())));
         findViewById(R.id.button_split).setOnClickListener(v -> textView.setText(String.format("%s/", textView.getText())));
+        findViewById(R.id.button_equal).setOnClickListener(v -> textView.setText(String.format("%s=", textView.getText())));
+        findViewById(R.id.button_percent).setOnClickListener(v -> textView.setText(String.format("%s%%", textView.getText())));
+
+
     }
 
     @Override
