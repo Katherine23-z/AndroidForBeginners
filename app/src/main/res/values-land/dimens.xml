@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_margin">1dp</dimen>
-    <dimen name="button_width">85dp</dimen>
+    <dimen name="button_width">95dp</dimen>
     <dimen name="button_text_size">18sp</dimen>
     <dimen name="editText_width">391dp</dimen>
     <dimen name="editText_textSize">30sp</dimen>
-    <dimen name="button_height">60dp</dimen>
-    <dimen name="button_equal_height">172dp</dimen>
-    <dimen name="enter_your_name_width">389dp</dimen>
+    <dimen name="button_height">45dp</dimen>
+    <dimen name="button_equal_height">192dp</dimen>
+    <dimen name="enter_your_name_width">550dp</dimen>
 </resources>

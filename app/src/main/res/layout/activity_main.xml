@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cosmos"
     android:clipToPadding="true"
     android:paddingStart="5dp"
     android:paddingEnd="5dp"
@@ -13,6 +14,7 @@
 
     <Button
         android:id="@+id/button8"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -25,6 +27,7 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -37,6 +40,7 @@
 
     <Button
         android:id="@+id/button5"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -49,6 +53,7 @@
 
     <Button
         android:id="@+id/button3"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -61,6 +66,7 @@
 
     <Button
         android:id="@+id/button1"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -74,6 +80,7 @@
 
     <Button
         android:id="@+id/button4"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -87,6 +94,7 @@
 
     <Button
         android:id="@+id/button6"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -99,6 +107,7 @@
 
     <Button
         android:id="@+id/button7"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -112,6 +121,7 @@
 
     <Button
         android:id="@+id/button_plus"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -127,6 +137,7 @@
 
     <Button
         android:id="@+id/button_minus"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -141,6 +152,7 @@
 
     <Button
         android:id="@+id/button_multiply"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -155,6 +167,7 @@
 
     <Button
         android:id="@+id/button9"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -167,6 +180,7 @@
 
     <Button
         android:id="@+id/button0"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -180,6 +194,7 @@
 
     <Button
         android:id="@+id/button_dot"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -192,6 +207,7 @@
 
     <Button
         android:id="@+id/button_percent"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -204,6 +220,7 @@
 
     <Button
         android:id="@+id/button_split"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -216,6 +233,7 @@
 
     <Button
         android:id="@+id/button_delete"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -228,6 +246,7 @@
 
     <Button
         android:id="@+id/button_memory"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
@@ -240,7 +259,8 @@
 
     <Button
         android:id="@+id/button_equal"
-        android:layout_width="175dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/button_equal_height"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/button_margin"
         android:text="@string/equal"
@@ -255,7 +275,7 @@
         android:labelFor="@id/editText"
         android:autofillHints="numbers"
         android:layout_width="@dimen/editText_width"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:inputType="number"
         android:textColor="#FAF6F6"
@@ -266,6 +286,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="@dimen/enter_your_name_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_name"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="70dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
