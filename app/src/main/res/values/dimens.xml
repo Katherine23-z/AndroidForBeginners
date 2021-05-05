@@ -5,4 +5,5 @@
     <dimen name="button_text_size">18sp</dimen>
     <dimen name="editText_width">391dp</dimen>
     <dimen name="editText_textSize">30sp</dimen>
+    <dimen name="button_height">wrap_content</dimen>
 </resources>
