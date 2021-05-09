@@ -73,7 +73,7 @@
         style="@style/MyStyle"
         android:text="@string/_6"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button_delete"
+        app:layout_constraintEnd_toStartOf="@+id/button_clear"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button9" />
 
@@ -168,7 +168,7 @@
         app:layout_constraintTop_toTopOf="@+id/button_multiply" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_delete"
+        android:id="@+id/button_clear"
         style="@style/MyStyle"
         android:text="@string/delete"
         app:layout_constraintBottom_toBottomOf="@+id/button6"
@@ -213,12 +213,15 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="@dimen/enter_your_name_width"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -229,6 +232,20 @@
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="@dimen/editText_width"
+        android:layout_height="50dp"
+        android:textColor="#FAF6F6"
+        android:textSize="@dimen/editText_textSize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
