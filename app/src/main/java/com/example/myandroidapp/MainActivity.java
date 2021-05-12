@@ -4,16 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final String TAG = "MainActivity";
     private static final String KEY = "NUMBER_FIELD";
     private static final String KEY_RESULT = "RESULT_FIELD";
 
@@ -60,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button9).setOnClickListener(v -> textView.setText(String.format("%s9", textView.getText())));
         findViewById(R.id.button0).setOnClickListener(v -> textView.setText(String.format("%s0", textView.getText())));
         findViewById(R.id.button_dot).setOnClickListener(v -> textView.setText(String.format("%s.", (textView.getText()))));
+
+        findViewById(R.id.button_settings).setOnClickListener(v -> startActivity(new Intent(this, MySecondActivity.class)));
 
         buttonPlus = findViewById(R.id.button_plus);
         buttonPlus.setOnClickListener(v -> {

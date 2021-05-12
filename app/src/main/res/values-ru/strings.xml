@@ -21,4 +21,8 @@
     <string name="equal">=</string>
     <string name="app_name">app_name</string>
     <string name="enter_your_name">введите имя</string>
+    <string name="settings">Настройки</string>
+    <string name="day">День</string>
+    <string name="night">Ночь</string>
+    <string name="back">Назад</string>
 </resources>
