@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.MyAndroidApp"
-    android:background="@drawable/cosmos"
+    android:background="@drawable/space"
     android:clipToPadding="true"
     android:paddingStart="5dp"
     android:paddingEnd="5dp"
@@ -190,11 +191,13 @@
         android:id="@+id/button_equal"
         style="@style/MyStyle"
         android:layout_width="@dimen/button_equal_weight"
+        android:layout_marginBottom="16dp"
         android:text="@string/equal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_dot"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:layout_editor_absoluteX="494dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -222,6 +225,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
