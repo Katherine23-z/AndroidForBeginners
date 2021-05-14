@@ -28,7 +28,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MyStyle" parent="Theme.MyAndroidApp">
+    <style name="MyButtonStyle" parent="Theme.MyAndroidApp_Dark">
         <item name="android:layout_width">@dimen/button_width</item>
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_margin">@dimen/button_margin</item>

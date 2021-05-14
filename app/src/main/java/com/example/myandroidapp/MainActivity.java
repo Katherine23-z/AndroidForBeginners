@@ -1,52 +1,55 @@
 package com.example.myandroidapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.Button;
 import android.widget.TextView;
-
-import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
     private static final String KEY = "NUMBER_FIELD";
     private static final String KEY_RESULT = "RESULT_FIELD";
+    private static final int SWITCH_THEME = 1;
 
-    boolean plus;
-    boolean minus;
-    boolean multiply;
-    boolean split;
-    boolean percent;
+    private boolean plus;
+    private boolean minus;
+    private boolean multiply;
+    private boolean split;
+    private boolean percent;
 
-    protected TextView resultTextView;
-    protected TextView textView;
-    private MaterialButton buttonPlus;
-    private MaterialButton buttonMinus;
-    private MaterialButton buttonMultiply;
-    private MaterialButton buttonSplit;
-    private MaterialButton buttonPercent;
+    private Button buttonPlus;
+    private Button buttonMinus;
+    private Button buttonMultiply;
+    private Button buttonSplit;
+    private Button buttonPercent;
 
     private double valueOne;
     private double valueTwo;
     private double result;
+    private int themeName;
 
     private String numberField;
     private String resultField;
+    private TextView textView;
+    private TextView resultTextView;
 
     Counter counter;
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.textView);
-        resultTextView = findViewById(R.id.resultTextView);
-        counter = new Counter(textView, resultTextView);
+        TextView textView = findViewById(R.id.textView);
+        TextView resultTextView = findViewById(R.id.resultTextView);
+
         findViewById(R.id.button1).setOnClickListener(v -> textView.setText(String.format("%s1", textView.getText())));
         findViewById(R.id.button2).setOnClickListener(v -> textView.setText(String.format("%s2", textView.getText())));
         findViewById(R.id.button3).setOnClickListener(v -> textView.setText(String.format("%s3", textView.getText())));
@@ -59,7 +62,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button0).setOnClickListener(v -> textView.setText(String.format("%s0", textView.getText())));
         findViewById(R.id.button_dot).setOnClickListener(v -> textView.setText(String.format("%s.", (textView.getText()))));
 
-        findViewById(R.id.button_settings).setOnClickListener(v -> startActivity(new Intent(this, MySecondActivity.class)));
+        findViewById(R.id.button_settings).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MySecondActivity.class);
+            startActivityForResult(intent, SWITCH_THEME);
+        });
 
         buttonPlus = findViewById(R.id.button_plus);
         buttonPlus.setOnClickListener(v -> {
@@ -81,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonSplit = findViewById(R.id.button_split);
         buttonSplit.setOnClickListener(v -> {
-           operandOnClick(buttonSplit);
+            operandOnClick(buttonSplit);
             split = true;
         });
 
@@ -99,7 +105,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public void operandOnClick(MaterialButton button) {
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == SWITCH_THEME) {
+            if (resultCode == MySecondActivity.RESULT_DARK) {
+                setTheme(R.style.Theme_MyAndroidApp_Dark);
+                finish();
+                startActivity(getIntent());
+                return;
+            }else if (resultCode == MySecondActivity.RESULT_LIGHT){
+                setTheme(R.style.Theme_MyAndroidApp_Light);
+                finish();
+                startActivity(getIntent());
+                return;
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+
+    }
+
+
+    public void operandOnClick(Button button) {
         if (!TextUtils.isEmpty(textView.getText().toString())) {
             valueOne = Double.parseDouble(textView.getText().toString());
             resultTextView.setText(String.format("%s%s", valueOne, button.getText().toString()));

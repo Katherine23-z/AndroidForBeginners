@@ -9,4 +9,7 @@
     <dimen name="button_equal_weight">180dp</dimen>
     <dimen name="enter_your_name_width">389dp</dimen>
     <dimen name="textView_height">50dp</dimen>
+    <dimen name="paddingStartForLandscape">5dp</dimen>
+    <dimen name="paddingEndForLandscape">5dp</dimen>
+    <dimen name="paddingBottomForLandscape">0dp</dimen>
 </resources>

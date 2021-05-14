@@ -9,24 +9,20 @@ import java.io.Serializable;
 
 public class Counter implements Serializable {
 
-    private TextView text;
-    private TextView result;
+    private String text;
+    private String result;
 
 
-    public Counter(TextView text, TextView result) {
+    public Counter(String  text, String result) {
         this.text = text;
         this.result = result;
      }
 
     public String getText() {
-        return text.getText().toString();
+        return text;
     }
 
     public String getResult() {
-        return result.getText().toString();
+        return result;
     }
-
-
-
-
 }
