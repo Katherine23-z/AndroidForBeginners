@@ -31,24 +31,21 @@ public class MainActivity extends AppCompatActivity {
     private double valueOne;
     private double valueTwo;
     private double result;
-    private int themeName;
+    protected int themeCode;
 
     private String numberField;
     private String resultField;
-    private TextView textView;
-    private TextView resultTextView;
-
-    Counter counter;
+    protected TextView textView;
+    protected TextView resultTextView;
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.textView);
-        TextView resultTextView = findViewById(R.id.resultTextView);
+        textView = findViewById(R.id.textView);
+        resultTextView = findViewById(R.id.resultTextView);
 
         findViewById(R.id.button1).setOnClickListener(v -> textView.setText(String.format("%s1", textView.getText())));
         findViewById(R.id.button2).setOnClickListener(v -> textView.setText(String.format("%s2", textView.getText())));
@@ -111,13 +108,11 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == SWITCH_THEME) {
             if (resultCode == MySecondActivity.RESULT_DARK) {
                 setTheme(R.style.Theme_MyAndroidApp_Dark);
-                finish();
-                startActivity(getIntent());
+                recreate();
                 return;
             }else if (resultCode == MySecondActivity.RESULT_LIGHT){
                 setTheme(R.style.Theme_MyAndroidApp_Light);
-                finish();
-                startActivity(getIntent());
+                recreate();
                 return;
             }
         }

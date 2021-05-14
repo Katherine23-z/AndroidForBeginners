@@ -24,6 +24,4 @@
     <string name="settings">Settings</string>
     <string name="day">Light</string>
     <string name="night">Dark</string>
-    <string name="back">Return</string>
-
 </resources>
