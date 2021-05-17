@@ -10,7 +10,7 @@
     android:paddingEnd="@dimen/paddingEndForLandscape"
     android:paddingBottom="@dimen/paddingBottomForLandscape"
     android:textAlignment="center"
-    android:theme="@style/Theme.MyAndroidApp"
+    android:theme="@style/MyAndroidAppTheme"
     tools:context=".MainActivity">
 
     <com.google.android.material.button.MaterialButton

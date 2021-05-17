@@ -14,7 +14,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private static final String KEY = "NUMBER_FIELD";
     private static final String KEY_RESULT = "RESULT_FIELD";
-    private static final int SWITCH_THEME = 1;
 
     private boolean plus;
     private boolean minus;
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private double valueOne;
     private double valueTwo;
     private double result;
-    protected int themeCode;
 
     private String numberField;
     private String resultField;
@@ -61,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.button_settings).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MySecondActivity.class);
-            startActivityForResult(intent, SWITCH_THEME);
+            startActivity(intent);
         });
 
         buttonPlus = findViewById(R.id.button_plus);
@@ -102,24 +100,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == SWITCH_THEME) {
-            if (resultCode == MySecondActivity.RESULT_DARK) {
-                setTheme(R.style.Theme_MyAndroidApp_Dark);
-                recreate();
-                return;
-            }else if (resultCode == MySecondActivity.RESULT_LIGHT){
-                setTheme(R.style.Theme_MyAndroidApp_Light);
-                recreate();
-                return;
-            }
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-
-    }
-
 
     public void operandOnClick(Button button) {
         if (!TextUtils.isEmpty(textView.getText().toString())) {

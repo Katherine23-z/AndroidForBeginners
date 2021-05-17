@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">app_name</string>
-    <string name="enter_your_name">введите имя</string>
     <string name="settings">Настройки</string>
-    <string name="day">День</string>
-    <string name="night">Ночь</string>
+    <string name="light_theme_button">Светлая тема</string>
+    <string name="dark_theme_button">Темная тема</string>
+    <string name="default_theme_button">Тема по умолчанию</string>
+    <string name="return_button">Назад</string>
 </resources>

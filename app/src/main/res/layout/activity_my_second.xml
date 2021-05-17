@@ -4,29 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".MySecondActivity">
 
-    <Button
-        android:id="@+id/button_dark"
-        style="@style/MyButtonStyle"
-        android:text="@string/night"
+
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_light" />
-
-    <Button
-        android:id="@+id/button_light"
-        style="@style/MyButtonStyle"
-        android:text="@string/day"
-        app:layout_constraintBottom_toTopOf="@+id/button_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13999999"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_bias="0.060000002">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light_theme_button" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_theme_button" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_theme_button" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonReturn"
+        style="@style/MyButtonStyle"
+        android:text="@string/return_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtons"
+        app:layout_constraintVertical_bias="0.063" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
