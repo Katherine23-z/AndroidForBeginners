@@ -20,7 +20,7 @@ public class MySecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(getAppTheme(MyAndroidAppCodeStyle));
+        setTheme(getAppTheme(MyAndroidAppLightCodeStyle));
         setContentView(R.layout.activity_my_second);
 
         initThemeChooser();
@@ -33,13 +33,14 @@ public class MySecondActivity extends AppCompatActivity {
         initRadioButton(findViewById(R.id.radioButtonLight), MyAndroidAppLightCodeStyle);
         initRadioButton(findViewById(R.id.radioButtonDark), MyAndroidAppDarkCodeStyle);
         RadioGroup rg = findViewById(R.id.radioButtons);
-        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(MyAndroidAppCodeStyle))).setChecked (true);
+        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(MyAndroidAppLightCodeStyle))).setChecked (true);
     }
 
     private void initRadioButton(View button, final int codeStyle) {
-        button.setOnClickListener(v ->
-                setAppTheme(codeStyle));
-        recreate();
+        button.setOnClickListener(v -> {
+            setAppTheme(codeStyle);
+            recreate();
+        });
     }
 
     private int getAppTheme(int codeStyle) {
